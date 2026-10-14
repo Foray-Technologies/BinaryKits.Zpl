@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net472;netstandard2.0;net8.0</TargetFrameworks>
@@ -21,18 +21,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
-  <Choose>
-    <When Condition="'$(TargetFramework)' == 'net8.0'">
-      <ItemGroup>
-        <PackageReference Include="SixLabors.ImageSharp" Version="3.1.12" />
-      </ItemGroup>
-    </When>
-    <Otherwise>
-      <ItemGroup>
-        <PackageReference Include="SixLabors.ImageSharp" Version="2.1.12" />
-      </ItemGroup>
-    </Otherwise>
-  </Choose>
+  <ItemGroup><PackageReference Include="SkiaSharp" Version="3.119.1" /></ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\LICENSE" Pack="true" PackagePath="LICENSE" />
